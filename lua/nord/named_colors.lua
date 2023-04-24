@@ -8,15 +8,15 @@ local nord = {
 	darkest_white = "#D8DEE9", -- nord4 in palette
 	darker_white = "#E5E9F0", -- nord5 in palette
 	white = "#ECEFF4", -- nord6 in palette
-	teal = "#8FBCBB", -- nord7 in palette
-	off_blue = "#88C0D0", -- nord8 in palette
-	glacier = "#81A1C1", -- nord9 in palette
-	blue = "#5E81AC", -- nord10 in palette
-	red = "#BF616A", -- nord11 in palette
-	orange = "#D08770", -- nord12 in palette
-	yellow = "#EBCB8B", -- nord13 in palette
-	green = "#A3BE8C", -- nord14 in palette
-	purple = "#B48EAD", -- nord15 in palette
+	teal = "#5DE4C7", -- nord7 in palette
+	off_blue = "#89DDFF", -- nord8 in palette
+	glacier = "#ADD7FF", -- nord9 in palette
+	blue = "#91B4D5", -- nord10 in palette
+	red = "#D0679D", -- nord11 in palette
+	orange = "#FAE4FC", -- nord12 in palette
+	yellow = "#FFFAC2", -- nord13 in palette
+	green = "#5FB3A1", -- nord14 in palette
+	purple = "#FCC5E9", -- nord15 in palette
 	none = "NONE",
 }
 return nord
