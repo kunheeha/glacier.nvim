@@ -1,4 +1,4 @@
-local glacier = require("glacier.colors")
+local glacier = require("glacier.colours")
 
 local theme = {}
 
