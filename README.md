@@ -1,13 +1,11 @@
 
-# shaunsingh/nord.nvim
+# kunheeha/glacier.nvim
 
-## Neovim theme based off of the [Nord Color Palette.](https://www.nordtheme.com/docs/colors-and-palettes)
-
-![118406380-d78ad580-b649-11eb-945c-5988fa717f39](https://user-images.githubusercontent.com/71196912/128029391-ad55fd41-d5f9-43bd-a795-c11b562f9d6d.jpg)
+## fork of [shaunsingh/glacier.nvim](https://github.com/shaunsingh/glacier.nvim) with a brighter colour palette
 
 ## Features
 
-Nord.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
+glacier.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
 added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 + Supported plugins:
@@ -48,12 +46,12 @@ Install via your favourite package manager:
 
 ```vim
 " If you are using Vim-Plug
-Plug 'shaunsingh/nord.nvim'
+Plug 'kunheeha/glacier.nvim'
 ```
 
 ```lua
 -- If you are using Packer
-use 'shaunsingh/nord.nvim'
+use 'kunheeha/glacier.nvim'
 ```
 
 ## 🌓 Usage
@@ -62,21 +60,21 @@ Enable the colorscheme:
 
 ```vim
 "Vim-Script:
-colorscheme nord
+colorscheme glacier
 ```
 
 ```lua
 --Lua:
-vim.cmd[[colorscheme nord]]
+vim.cmd[[colorscheme glacier]]
 ```
 
-To enable the `nord` theme for `Lualine`, simply specify it in your lualine settings:
+To enable the `glacier` theme for `Lualine`, simply specify it in your lualine settings:
 
 ```lua
 require('lualine').setup {
   options = {
     -- ... your lualine config
-    theme = 'nord'
+    theme = 'glacier'
     -- ... your lualine config
   }
 }
@@ -86,39 +84,39 @@ require('lualine').setup {
 
 | Option                              | Default     | Description                                                                                                                                                     |
 | ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| nord_contrast                   | `false`      | Make sidebars and popup menus like nvim-tree and telescope have a different background                                                                                       |
-| nord_borders                    | `false`     | Enable the border between verticaly split windows visable
-| nord_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
-| nord_cursorline_transparent     | `false`     | Set the cursorline transparent/visible
-| nord_enable_sidebar_background  | `false`     | Re-enables the background of the sidebar if you disabled the background of everything
-| nord_italic                     | `true`      | enables/disables italics
-| nord_uniform_diff_background    | `false`     | enables/disables colorful backgrounds when used in *diff* mode
-| nord_bold                       | `true`      | enables/disables bold
+| glacier_contrast                   | `false`      | Make sidebars and popup menus like nvim-tree and telescope have a different background                                                                                       |
+| glacier_borders                    | `false`     | Enable the border between verticaly split windows visable
+| glacier_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
+| glacier_cursorline_transparent     | `false`     | Set the cursorline transparent/visible
+| glacier_enable_sidebar_background  | `false`     | Re-enables the background of the sidebar if you disabled the background of everything
+| glacier_italic                     | `true`      | enables/disables italics
+| glacier_uniform_diff_background    | `false`     | enables/disables colorful backgrounds when used in *diff* mode
+| glacier_bold                       | `true`      | enables/disables bold
 
 ```lua
 -- Example config in lua
-vim.g.nord_contrast = true
-vim.g.nord_borders = false
-vim.g.nord_disable_background = false
-vim.g.nord_italic = false
-vim.g.nord_uniform_diff_background = true
-vim.g.nord_bold = false
+vim.g.glacier_contrast = true
+vim.g.glacier_borders = false
+vim.g.glacier_disable_background = false
+vim.g.glacier_italic = false
+vim.g.glacier_uniform_diff_background = true
+vim.g.glacier_bold = false
 
 -- Load the colorscheme
-require('nord').set()
+require('glacier').set()
 ```
 
 ```vim
 " Example config in Vim-Script
-let g:nord_contrast = v:true
-let g:nord_borders = v:false
-let g:nord_disable_background = v:false
-let g:nord_italic = v:false
-let g:nord_uniform_diff_background = v:true
-let g:nord_bold = v:false
+let g:glacier_contrast = v:true
+let g:glacier_borders = v:false
+let g:glacier_disable_background = v:false
+let g:glacier_italic = v:false
+let g:glacier_uniform_diff_background = v:true
+let g:glacier_bold = v:false
 
 " Load the colorscheme
-colorscheme nord
+colorscheme glacier
 ```
 
 ### headlines support
@@ -153,7 +151,7 @@ It should look like this
 To support [BufferLine](https://github.com/akinsho/nvim-bufferline.lua), you can add these code to your settings:
 
 ```lua
-local highlights = require("nord").bufferline.highlights({
+local highlights = require("glacier").bufferline.highlights({
     italic = true,
     bold = true,
 })
@@ -173,7 +171,7 @@ It should look like this
 or you want to use slant separator
 
 ```lua
-local highlights = require("nord").bufferline.highlights({
+local highlights = require("glacier").bufferline.highlights({
     italic = true,
     bold = true,
     fill = "#181c24"
@@ -195,11 +193,11 @@ The default setting of bufferline highlights is
 
 ```lua
 {
-    fill = colors.nord0_gui,
-    indicator = colors.nord9_gui,
-    bg = colors.nord0_gui,
-    buffer_bg = colors.nord0_gui,
-    buffer_bg_selected = colors.nord1_gui,
+    fill = colors.glacier0_gui,
+    indicator = colors.glacier9_gui,
+    bg = colors.glacier0_gui,
+    buffer_bg = colors.glacier0_gui,
+    buffer_bg_selected = colors.glacier1_gui,
     buffer_bg_visible = "#2A2F3A",
     bold = true,
     italic = true,

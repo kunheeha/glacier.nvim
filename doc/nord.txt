@@ -1,20 +1,20 @@
 ================================================================================
 
-nord is a colorscheme for NeoVim written in Lua with built in support
+glacier is a colorscheme for NeoVim written in Lua with built in support
 for native LSP, TreeSitter and many more plugins.
 
 ================================================================================
 CONTENTS
 
-    1. Features ................. |nord-features|
-    2. Usage .................... |nord-usage|
-    3. Styles ................... |nord-styles|
-    4. Configuration ............ |nord-configuration|
-    5. Functions ................ |nord-functions|
-    6. Mappings ................. |nord-mappings|
+    1. Features ................. |glacier-features|
+    2. Usage .................... |glacier-usage|
+    3. Styles ................... |glacier-styles|
+    4. Configuration ............ |glacier-configuration|
+    5. Functions ................ |glacier-functions|
+    6. Mappings ................. |glacier-mappings|
 
 ================================================================================
-1. Features                                             *nord-features*
+1. Features                                             *glacier-features*
 
     + A wide array of supported plugins -TreeSitter
                                         -LSP Diagnostics
@@ -49,29 +49,29 @@ CONTENTS
       NeoVim
 
 ================================================================================
-2. Usage                                                   *nord-usage*
+2. Usage                                                   *glacier-usage*
 
     To use the default settings, just apply the theme
 
     If you are using Vim-Script:
-        colorscheme nord~
+        colorscheme glacier~
 
     If you are using Lua:
-        require('nord').set~
+        require('glacier').set~
 
 
-    nord also includes a Lualine theme. Set it in your Lualine config
+    glacier also includes a Lualine theme. Set it in your Lualine config
         require('lualine').setup {~
           options = {~
             -- ... your lualine config
-            theme = 'nord'~
+            theme = 'glacier'~
             -- ... your lualine config
           }~
         }~
-    Just make sure to set the theme to "nord", as "nord" already
+    Just make sure to set the theme to "glacier", as "glacier" already
     exist built in to lualine
     
     If the lualine's background has become transparent, make sure that
-    lualine setup is being called after the nord theme has been applied.
+    lualine setup is being called after the glacier theme has been applied.
 
 vim:tw=78:ts=4:ft=help:norl:
