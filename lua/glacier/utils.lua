@@ -1,8 +1,8 @@
-local util = {}
-local nord = require("nord.theme")
+local utils = {}
+local glacier = require("glacier.theme")
 
 -- Go trough the table and highlight the group with the color values
-util.highlight = function(group, color)
+utils.highlight = function(group, color)
 	local style = color.style and "gui=" .. color.style or "gui=NONE"
 	local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
 	local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
@@ -16,32 +16,32 @@ util.highlight = function(group, color)
 	end
 end
 
--- Only define nord if it's the active colorscheme
-function util.onColorScheme()
-	if vim.g.colors_name ~= "nord" then
-		vim.cmd([[autocmd! nord]])
-		vim.cmd([[augroup! nord]])
+-- Only define glacier if it's the active colorscheme
+function utils.onColorScheme()
+	if vim.g.colors_name ~= "glacier" then
+		vim.cmd([[autocmd! glacier]])
+		vim.cmd([[augroup! glacier]])
 	end
 end
 
 -- Change the background for the terminal, packer and qf windows
-util.contrast = function()
-	vim.cmd([[augroup nord]])
+utils.contrast = function()
+	vim.cmd([[augroup glacier]])
 	vim.cmd([[  autocmd!]])
-	vim.cmd([[  autocmd ColorScheme * lua require("nord.util").onColorScheme()]])
+	vim.cmd([[  autocmd ColorScheme * lua require("glacier.utils").onColorScheme()]])
 	vim.cmd([[  autocmd TermOpen * setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]])
 	vim.cmd([[  autocmd FileType packer setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]])
 	vim.cmd([[  autocmd FileType qf setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]])
 	vim.cmd([[augroup end]])
 end
 -- Loads the colors from the dictionary Object (colorSet)
-function util.loadColorSet(colorSet)
+function utils.loadColorSet(colorSet)
 	for group, colors in pairs(colorSet) do
-		util.highlight(group, colors)
+		utils.highlight(group, colors)
 	end
 end
 -- Load the theme
-function util.load()
+function utils.load()
 	-- Set the theme environment
 	vim.cmd("hi clear")
 	if vim.fn.exists("syntax_on") then
@@ -49,42 +49,42 @@ function util.load()
 	end
 	-- vim.o.background = "dark"
 	vim.o.termguicolors = true
-	vim.g.colors_name = "nord"
+	vim.g.colors_name = "glacier"
 
 	-- load the most importaint parts of the theme
-	local editor = nord.loadEditor()
-	local syntax = nord.loadSyntax()
-	local treesitter = nord.loadTreeSitter()
-	local filetypes = nord.loadFiletypes()
+	local editor = glacier.loadEditor()
+	local syntax = glacier.loadSyntax()
+	local treesitter = glacier.loadTreeSitter()
+	local filetypes = glacier.loadFiletypes()
 
 	-- load editor highlights
-	util.loadColorSet(editor)
+	utils.loadColorSet(editor)
 
 	-- load syntax highlights
-	util.loadColorSet(syntax)
+	utils.loadColorSet(syntax)
 
 	-- load treesitter highlights
-	util.loadColorSet(treesitter)
+	utils.loadColorSet(treesitter)
 
 	-- load filetype-specific highlights
-	util.loadColorSet(filetypes)
+	utils.loadColorSet(filetypes)
 
-	nord.loadTerminal()
+	glacier.loadTerminal()
 
 	-- imort tables for plugins and lsp
-	local plugins = nord.loadPlugins()
-	local lsp = nord.loadLSP()
+	local plugins = glacier.loadPlugins()
+	local lsp = glacier.loadLSP()
 
 	-- load plugin highlights
-	util.loadColorSet(plugins)
+	utils.loadColorSet(plugins)
 
 	-- load lsp highlights
-	util.loadColorSet(lsp)
+	utils.loadColorSet(lsp)
 
 	-- if contrast is enabled, apply it to sidebars and floating windows
-	if vim.g.nord_contrast == true then
-		util.contrast()
+	if vim.g.glacier_contrast == true then
+		utils.contrast()
 	end
 end
 
-return util
+return utils

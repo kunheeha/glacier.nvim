@@ -1,11 +1,11 @@
-local colors = require("nord.colors")
+local colours = require("glacier.colours")
 
 local setting = {
-	fill = colors.nord0_gui,
-	indicator = colors.nord9_gui,
-	bg = colors.nord0_gui,
-	buffer_bg = colors.nord0_gui,
-	buffer_bg_selected = colors.nord1_gui,
+	fill = colours.glacier0_gui,
+	indicator = colours.glacier9_gui,
+	bg = colours.glacier0_gui,
+	buffer_bg = colours.glacier0_gui,
+	buffer_bg_selected = colours.glacier1_gui,
 	buffer_bg_visible = "#2A2F3A",
 	bold = true,
 	italic = true,

@@ -1,4 +1,4 @@
-local nord = {
+local glacier = {
 	black = "#2E3440", -- nord0 in palette
 	dark_gray = "#3B4252", -- nord1 in palette
 	gray = "#434C5E", -- nord2 in palette
@@ -18,4 +18,4 @@ local nord = {
 	purple = "#CBA6F7", -- nord15 in palette
 	none = "NONE",
 }
-return nord
+return glacier
